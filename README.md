@@ -12,4 +12,7 @@ In the command prompt you just need to go inside the folder that are the files a
 - ```list``` command list all .md files in the current folder
 - ```open``` command open a .md file in the terminal
 
+## Warning
+Please checkout [wiki](../../wiki) page to see features and issues.
+
 (this README wasn't created using this project manager)
