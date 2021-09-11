@@ -1,12 +1,12 @@
 print "\nNome do projeto a ser apagado: "
 fileName = gets.chomp
 
-print "Você realmente quer apagar este projeto? [sim/nao]: "
-certeza = gets.chomp
-
 dir = Dir["*.md"]
 
-if fileName in dir
+if dir.include? fileName + ".md"
+    print "Você realmente quer apagar este projeto? [sim/nao]: "
+    certeza = gets.chomp
+
     if certeza == "sim"
         File.delete("#{fileName}.md")
         puts "\"#{fileName}\" apagado com sucesso"
@@ -14,7 +14,7 @@ if fileName in dir
         puts "Não foi apagado"
     end
 else
-    puts "Este projeto não existe"
+    puts "Projeto \"#{fileName}\" não encontrado"
 end
 
 puts ""
