@@ -1,7 +1,8 @@
 @echo OFF
 
 ::Path that the files are located in
-set "projetoPath=D:\Victor\Programacao\Linguagens\Ruby\project\"
+::set "projetoPath=D:\Victor\Programacao\Linguagens\Ruby\project\"
+set "projetoPath=.\"
 
 ::Parameters list
 if "%~1"=="" goto blank
