@@ -24,13 +24,18 @@ File.open("#{name}.md", "w+", :encoding => 'utf-8') do |f|
 
     f.write("\n\n\n## Objetivos específicos:")
     espOb.each do |first|
+        
+        index = 0
+
         first.split("-").each do |second|
-            
-            if second == first.split("-")[0] 
+
+            if index == 0 
                 f.write("\n- [ ] #{second}")
             else 
                 f.write("\n    - [ ] #{second}")
             end
+
+            index += 1
 
         end
     end
