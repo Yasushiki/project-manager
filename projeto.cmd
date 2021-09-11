@@ -1,7 +1,6 @@
 @echo OFF
 
-::Path that the files are located in
-::set "projetoPath=D:\Victor\Programacao\Linguagens\Ruby\project\"
+:: Path that the files are located in
 set "projetoPath=.\"
 
 ::Parameters list
@@ -11,42 +10,42 @@ if "%~1"=="remove" goto remove
 if "%~1"=="list" goto list
 if "%~1"=="open" goto project else goto unknown
 
-::If nothing is passed as parameter
+:: If nothing is passed as parameter
 :blank
 
 goto done
 
-::Create the .md file
+:: Create the .md file
 :create
 
 ruby "%projetoPath%create.rb"
 goto done
 
-::Delete the .md file
+:: Delete the .md file
 :remove
 
 ruby "%projetoPath%remove.rb"
 goto done
 
-::List the .md files
+:: List the .md files
 :list
 
 ruby "%projetoPath%showList.rb"
 goto done
 
-::Show a .md file in the command prompt
+:: Show a .md file in the command prompt
 :project
 
 ruby "%projetoPath%showProject.rb"
 goto done
 
-::It should be if you pass a unknwon parameter
+:: It should be if you pass a unknwon parameter
 :unknown
 
 echo "Comando não conhecido"
 goto done
 
-::End of the command
+:: End of the command
 :done
 
 echo ON
