@@ -1,4 +1,11 @@
-print "\nNome do projeto: "
+dictonary = {"pt" => 
+    ["Nome do projeto: ", "Projeto", "não encontrado"],
+            "en" =>
+    ["Project name: ", "Project", "not found"]}
+
+lang = "pt"
+
+print "\n#{dictonary[lang][0]}"
 fileName = gets.chomp
 
 dir = Dir["*.md"]
@@ -16,7 +23,7 @@ if dir.include? fileName + ".md"
     puts ""
 
 else
-    puts "Projeto \"#{fileName}\" não encontrado"
+    puts "#{dictonary[lang][1]} \"#{fileName}\" #{dictonary[lang][2]}"
 end
 
 puts ""

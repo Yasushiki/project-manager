@@ -1,28 +1,35 @@
 # encoding: utf-8
 
-print "\nNome do projeto: "
+dictonary = {"pt" => 
+    ["Nome do projeto: ", "Ferramentas: ", "Objetivo geral: ", "Objetivos específicos: ", "PROJETO"],
+            "en" =>
+    ["Project name: ", "Tools: ", "General objective: ", "Specific objectives: ", "PROJECT"]}
+
+lang = "pt"
+
+print "\n#{dictonary[lang][0]}"
 name = gets.chomp
 
-print "Ferramentas: "
+print "#{dictonary[lang][1]}"
 ferra = gets.chomp
 
-print "Objetivos gerais: "
+print "#{dictonary[lang][2]}"
 gerOb = gets.chomp
 
-print "Objetivos específicos: "
+print "#{dictonary[lang][3]}"
 espOb = gets.chomp.encode("UTF-8").split("/")
 
 
 File.open("#{name}.md", "w+", :encoding => 'utf-8') do |f|
-    f.write("# PROJETO #{name.upcase}\n")
+    f.write("# #{dictonary[lang][4]} #{name.upcase}\n")
 
-    f.write("\n## Ferramentas: \n")
+    f.write("\n## #{dictonary[lang][1]} \n")
     f.write(ferra)
 
-    f.write("\n\n\n## Objetivo geral: \n")
+    f.write("\n\n\n## #{dictonary[lang][2]} \n")
     f.write(gerOb)
 
-    f.write("\n\n\n## Objetivos específicos:")
+    f.write("\n\n\n## #{dictonary[lang][3]}")
     espOb.each do |first|
         
         index = 0
