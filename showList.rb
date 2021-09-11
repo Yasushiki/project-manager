@@ -1,10 +1,15 @@
+dictonary = {"pt" => 
+    ["Projetos: ", "Você não tem nenhum projeto"],
+            "en" =>
+    ["Projects: ", "You don't have any projects"]}
+
+lang = "pt"
+
 puts ""
 
 if Dir["*.md"].length > 0
-    puts "Projetos: "
+    puts dictonary[lang][0]
     puts Dir["*.md"]
 else
-    puts "Você não tem nenhum projeto"
+    puts dictonary[lang][1]
 end
-
-puts ""
