@@ -11,7 +11,7 @@ if dir.include? fileName + ".md"
         File.delete("#{fileName}.md")
         puts "\"#{fileName}\" apagado com sucesso"
     else
-        puts "Não foi apagado"
+        puts "Projeto não apagado"
     end
 else
     puts "Projeto \"#{fileName}\" não encontrado"
