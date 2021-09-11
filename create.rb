@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-print "Nome do projeto: "
+print "\nNome do projeto: "
 name = gets.chomp
 
 print "Ferramentas: "
@@ -36,3 +36,5 @@ File.open("#{name}.md", "w+", :encoding => 'utf-8') do |f|
     end
 
 end
+
+puts ""
